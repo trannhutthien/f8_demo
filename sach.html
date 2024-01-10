@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Khi sử dụng thẻ này, trang web sẽ phản ánh đúng kích thước của thiết bị và tránh tình trạng 
+        hiển thị trang web "zoomed in" hoặc "zoomed out" khi xem trên các thiết bị di động. Điều này giúp cải thiện trải nghiệm người dùng trên các thiết bị di động và giúp đảm bảo rằng trang web của bạn được hiển thị đúng cách trên mọi loại màn hình.
+    -->
+        <title>Trang web bán hàng </title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1em;
+        }
+
+        section {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            padding: 20px;
+        }
+
+        .product {
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 15px;
+            margin: 10px;
+            width: 200px;
+            text-align: center;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1em;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Trang web bán hàng</h1>
+    </header>
+
+    <section>
+        <div class="product">
+            <img src="" alt="Product 1">
+            <h2>Product 1</h2>
+            <p>Description of Product 1.</p>
+            <p>$19.99</p>
+            <button>Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <img src="product2.jpg" alt="Product 2">
+            <h2>Product 2</h2>
+            <p>Description of Product 2.</p>
+            <p>$29.99</p>
+            <button>Add to Cart</button>
+        </div>
+
+        <!-- Add more product divs as needed -->
+
+    </section>
+
+    <footer>
+        <p>&copy; 2023 Trang web bán hàng. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>

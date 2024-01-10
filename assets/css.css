@@ -1,0 +1,99 @@
+
+ /* reset css */
+  
+*{
+    padding:0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+
+   /*
+   1. làm từ ngoài vào trong 
+   2. làm tuè trên xuống dưới
+   3.làm từ tổng quan đến chi tiết
+   */
+
+   /*
+    1.vị trí
+    2.kích cở (width , height)
+    3.màu sắc
+    4.kiểu dáng ( kiểu chử....)
+   */
+
+
+
+   /*inline :để các khối tùư nằm dọc thành ngang ,block:vẩn giử lại tính chất khối*/
+    html{
+      font-family: Arial, Helvetica, sans-serif;
+    } 
+
+   #main{
+
+   }
+
+   #header{
+     height:46px;
+     background-color: #000;
+
+   }
+    /* #nav > li{
+    display:inline-block;
+   } */
+    #nav li {
+      display:inline-block;
+      position:relative;
+      
+    }
+    #nav li a{
+      
+      line-height:46px;
+      padding:0 24px; 
+      text-decoration: none;
+      
+    }
+    #nav > li > a{
+      color:aliceblue;
+    }
+    #nav > li:hover > a{
+      background-color:#ccc;
+      color:#000;
+      display: inline-block;
+
+    }
+    #nav .supnav li:hover{ /*có thể gộp thẻ nầy với thẻ trên lại để gọn hơn ( #nav .supnav li:hover a, #nav > li:hover > a*/
+      background-color:#ccc;
+      color:#000;
+      display: inline-block;
+     }
+    #nav .supnav{
+     /* display:none; */
+     position:absolute;
+    /* display: flex;  ( Tạo một thùng chứa)
+     flex-direction: column; (Xac định hướng cho dòng hoặc cột ,column:là cột ,row-reverse:là hàng và đảo ngược vị trí ngược lại so với mặt định */ 
+     background-color: #fff;
+     
+    }
+     
+     #nav .supnav a{      
+      color:#000;
+     }
+
+    #slider{
+      height:500px;
+      background-color:#333;
+    }
+
+   
+
+   #content{
+
+   }
+
+   #footer{
+
+   }
+
+   
+   
