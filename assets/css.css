@@ -45,6 +45,7 @@
       display:inline-block;
       position:relative;
       
+      
     }
     #nav li a{
       
@@ -55,12 +56,15 @@
     }
     #nav > li > a{
       color:aliceblue;
+      text-transform: uppercase;
     }
+     #nav li:hover .supnav{
+      display:block; /*do display:block  mạnh hơn thẻ display:inline-block nên khi nên khi di chuột vào sẽ thực hiện thẻ nầy  */
+     }
     #nav > li:hover > a{
       background-color:#ccc;
       color:#000;
       display: inline-block;
-
     }
     #nav .supnav li:hover{ /*có thể gộp thẻ nầy với thẻ trên lại để gọn hơn ( #nav .supnav li:hover a, #nav > li:hover > a*/
       background-color:#ccc;
@@ -68,17 +72,25 @@
       display: inline-block;
      }
     #nav .supnav{
-     /* display:none; */
+      display:none; 
      position:absolute;
     /* display: flex;  ( Tạo một thùng chứa)
      flex-direction: column; (Xac định hướng cho dòng hoặc cột ,column:là cột ,row-reverse:là hàng và đảo ngược vị trí ngược lại so với mặt định */ 
      background-color: #fff;
+     box-shadow:0 0 10px rgba(0, 0, 0, 0.3);
+     min-width:160px;
      
     }
-     
-     #nav .supnav a{      
-      color:#000;
+     #nav .nav-icon{
+      font-size:12px;
      }
+    
+      #nav .supnav li ,
+       #nav .supnav a{
+        width:100%;
+        color:#000;
+        padding:0 8px
+      }
 
     #slider{
       height:500px;
