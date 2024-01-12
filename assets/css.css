@@ -36,8 +36,13 @@
    #header{
      height:46px;
      background-color: #000;
+     position:fixed;   /* lệnh position:fixed nầy giúp cho phần header dính sát phía trên khi cuônnj không bị trôi. inset để viết gọn viêtj canh 4 hướng thai vè là top , right,bottom,left,    */
+     inset:0 0 auto 0;
 
    }
+    #nav{
+      display:inline-block;
+    }
     /* #nav > li{
     display:inline-block;
    } */
@@ -91,16 +96,33 @@
         color:#000;
         padding:0 8px
       }
+      #header .search-btn{
+        float:right;/*khi moọt thẻ div có tính chất kế thừa chiều ngang đi nửa thì khi đưa 'float ' vào thì sẽ bị mất tính kế thừa */
+
+      }
+      #header .search-btn:hover {
+        background-color:coral;
+        cursor:pointer; /*cursor: để thai đổi kiểu con trỏ chuột */
+      }
+
+      #header .search-icon{
+        color:#fff;
+        line-height:46px;  /*line-height: có công dụng để căn giửa khoản cách bên trong của thể cha, lúc nầy thẻ <div> cha height=46px */
+        padding:0 20px;
+        font:20px
+        
+      }
 
     #slider{
       height:500px;
       background-color:#333;
+      margin-top:46px;
     }
 
    
 
    #content{
-
+    
    }
 
    #footer{
