@@ -38,6 +38,7 @@
      background-color: #000;
      position:fixed;   /* lệnh position:fixed nầy giúp cho phần header dính sát phía trên khi cuônnj không bị trôi. inset để viết gọn viêtj canh 4 hướng thai vè là top , right,bottom,left,    */
      inset:0 0 auto 0;
+     z-index:1;       /* Nếu phần header bị chìm bên dưới ảnh sử dụng lệnh nầy để giúp header nổi lên lại  */
 
    }
     #nav{
@@ -109,21 +110,95 @@
         color:#fff;
         line-height:46px;  /*line-height: có công dụng để căn giửa khoản cách bên trong của thể cha, lúc nầy thẻ <div> cha height=46px */
         padding:0 20px;
-        font:20px
+        font-size:20px
         
       }
 
     #slider{
-      height:500px;
-      background-color:#333;
-      margin-top:46px;
+      padding-top:50%;  /*tức là cho tỉ lệ chiều rộng bằng một nủa chiều ngang(chiều ngang mặt định úc nầy =100%) */
+      
+      margin-top:46px; /*chừa chổ cho phần header nếu không phần header sẽ bị đẩy nổi lên trên do header lúc nầy đang có thuộc tính position:fixed */
+      background:url(/assets/img/chicago.jpg) top center / cover no-repeat;
+      position:relative;
+      
+     
+    }
+    #slider .text-content{
+       color:#ccc;
+       position:absolute;
+       bottom:46px;
+      /* left:50%;
+       transform:translateX(-50%); ( Canh giửa cho phần trong khối nhỏ  ) */  
+       text-align:center; /* Canh phần nằm ngoài khối nhỏ ngay giửa */
+      /* width:100%;  ( Cach 2 để canh giử cho khối nhỏ  ) */
+       left:0;
+       right:0; /*cach thu 3 */
+    }
+    #slider .text-heading{
+      font-weight:600;/* chỉnh độ dầy của chử dao động từ 100 - 700 */
+      font-size:24px;
+      margin-bottom:25px;
+
+    }
+    #slider .text-discription{
+     font-size:15px;
+     
     }
 
    
 
    #content{
+   
+   }
+   #content .content-section{
+    width: 800px;
+    margin-left:auto;
+    margin-right:auto;
+    padding:64px 0;
+   }
+   #content .section-heading{
+     text-align:center;
+     font-size:30px;
+     font-weight:500;  /* độ dầy của chử */
+     letter-spacing:4px;  /* khoanr cachs giửa các từ */
+   }
+   #content .section-sup-heading{
+    text-align:center;   /* Canh giửa */
+    margin-top:25px;
+    font-size:15px;
+      /* Theo mmẩu là sử dụng mảrgin con luc nay dan su dung padding  */
+      opacity:0.6;  /* Lamf mờ nội dung của thẻ */
+   }
+   #content .about-text{
+    font-size:15px;
+    line-height:25px; /*KHoang cách giử các dong*/
+    text-align:justify ; /*canh chu đầu dòng và cuối dòng bằng nhau */
+    margin-top:25px;
+   }
+
+
+
+   #content .member-list{
+     padding-top:47px;
+     overflow:hidden; /* khắc phục lỗi không ôm đc thẻ con khhi sử dụng (float) */
     
    }
+   
+   #content .member-item{
+    float:left;  /* Kéo dảy hình đứng sang nầm ngang ,khi sử dụng thẻ nầy thẻ con sẽ nổi lên mặt trên làm cho thẻ cha không ôm đc những thẻ con có dùng (float) */
+    width:calc(100% /3);
+    text-align:center;
+  }
+   #content .member-name{
+    
+    margin:15px 0;
+   }
+   #content .member-avata{
+    margin-bottom:16px;
+    border-radius:4px; /* taoj góc bo cho hình ảnh */
+    width:154px; /* kichs cở ảnh */
+   }
+
 
    #footer{
 
