@@ -28,6 +28,9 @@
     html{
       font-family: Arial, Helvetica, sans-serif;
     } 
+     .text-white{
+      color:#fff !important; /* độ ưu tiên mạnh  */
+     }
 
    #main{
 
@@ -198,11 +201,199 @@
     border-radius:4px; /* taoj góc bo cho hình ảnh */
     width:154px; /* kichs cở ảnh */
    }
+    /* Tour ssection */
 
+    .tour-section{
+      background-color:#000;
+    }
+     .tickets-lits{
+      background-color:#fff;
+      margin-top:40px;
+     }
+     .tickets-lits li{
+      padding:8px 16px;
+      border-bottom:1px solid gray;
+      color:#757575;
+      font-size:15px;
+      list-style:none;  /* xóa dấu chấm đằng trước của (li) */
+     }
+     .tickets-lits .sold-out{
+      padding:0 8px;
+      margin:0 16px;
+      background-color:#f44336;
+      color:#fff;
+     }
+     .tickets-lits .quantity{
+      float:right;
+      padding:0 8px;
+      margin-right:16px;
+      background-color:#000;
+      color:#fff;
+      border-radius:50%; /* tạo một khối hình vuôn thành hình tròn */
+      width:24px;
+      /* chir sử dụng đc (margin) số âm khi đi cùng với (float) */
+     }
+
+     /* places */
+     .places-list{
+      padding:32px 8px;
+      margin:0 -16px;  /* để canh hai mép ngoài khi bị lệch ,phải viết ở thẻ cha chứa thẻ con đó */
+      overflow: hidden;
+     }
+     .places-item{
+      float:left;
+      width:calc(100%/3);
+      padding:0 8px;
+      margin-bottom:16px;
+      
+      
+    }
+    
+    .places-img{
+      width:100%;
+      display:block;  /* do (img) lúc nầy có tính chất của díplay:inline nên phải thai bằng display:block đẻ thẻ cha nó có thể ôm trọn hết  */
+      
+    }
+    .places-img:hover{
+      opacity:0.6; /* opacity: độ mờ đục */
+    }
+    
+    .places-body{
+      background-color:#fff;
+      padding:16px ;
+      font-size:15px;
+
+     }
+     .places-heading{
+      margin:15px 0;
+      font-weight:600;
+
+     }
+     .places-time{
+      color:#757575;
+
+     }
+
+
+     .places-discribe{
+      margin:15px 0;
+      line-height: 1.5;
+
+     }
+     .places-buy-btn{
+      margin-bottom: 16px;
+      color: #fff;
+      background-color: black;
+      padding: 11px 16px;
+      display:inline-block;  /* lúc nầy thẻ đang mang tính chất của inline khi padding lên vì có tính chất của inline nê thẻ nayaf không chạm viền với hẻ khác mà sẽ nổi lên trên để khắc phục thì cần đổi lại thành display:inline-block */
+
+     }
+     .places-buy-btn:hover{
+      color:#000;
+      background-color:#757575;
+     }
+
+     
 
    #footer{
 
    }
+     /*MOdal*/
+   
+   .modal{
+    position:fixed;
+    top:0;
+    right:0;
+    bottom:0;
+    left:0;
+    background:rgba(0, 0, 0, 0.3);
+    /* để modal-container nằm giửa thẻ cha modal thì phải biến thẻ cha modal thành dạng (diplay:flex) rồi dùng (align-items:center) để canh giữa height,(justify-content:center) để canh giữa width */
+    
+    align-items:center;
+    justify-content:center; 
+    display:none; /* tắt mmodal khi chưa có js */  
+  }
+  .modal.open{
+    display:flex;
+  }
+   .modal-container{
+    width: 900px;
+    max-width:calc(100% - 40px) ; /* để khi thu nhỏ trang web lại phần modal vẫn chừa mỗi bên 20px ( số phía sau phải cách dấu trừ ra ) */
+    min-height:200px;
+    background-color:#fff;
+    position:relative;
 
+   }
+   .modal-close{
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 16px;
+    cursor:pointer; /* thai đổi kiểu con trỏ chuột*/
+    color:#fff;
+    
+    }
+    .modal-close:hover{
+      background-color:#757575;
+      border-radius:4px; /* taoj góc bo cho hình ảnh */
+    }
    
    
+   .modal-header{
+    background-color: rgb(7, 103, 71);
+    height:130px;
+    display: flex;           /*                     */
+    align-items:center;      /*    canh giửa        */
+    justify-content:center; /*                      */
+    
+  }
+  .modal-content{
+    font-size:30px;
+    color:#fff;
+     letter-spacing:4px;  /* khoản cách giử các từ */
+    width:860px;
+    height:45px;
+    margin:15px 0;
+    display: flex;           /*                     */
+    align-items:center;      /*    canh giửa        */
+    justify-content:center; /*                      */
+   }
+    
+   .modal-body {
+    padding: 16px;
+   }
+    .modal-lebal{
+      display:block;
+      margin-bottom:10px;
+      font-size:15px;
+    }
+    .modal-input{
+      margin-bottom:24px;
+      font-size:15px;
+      padding:8px;
+      width:100%;
+      border:1px solid #ccc;
+    }
+   #buy-tickets{
+    height:55px;
+    width:860px;
+    max-width:calc(100% - 40px) ; /* để khi thu nhỏ trang web lại phần modal vẫn chừa mỗi bên 20px */
+    background-color: rgb(7, 103, 71);
+    margin-bottom:16px;
+    color:#fff;
+    font-weight:500;  /* độ dầy của chử */
+    font-size:15px;
+    border:none;
+    padding:18px;
+   }
+   #buy-tickets:hover{
+    background-color:#757575;
+    color:#fff;
+   }
+   .modal-footer{
+    padding:16px;
+    text-align:right;
+   }
+   .modal-footer a{
+    color:rgb(13, 120, 174);
+   }

@@ -37,11 +37,12 @@
         </div>
         <div id="slider">
           <div class="text-content">
-            <h2  class="text-heading">AAAAAAAAA</h2>
-             <div class="text-discription">bbbbbbbbbbbbbbbbbbbb</div>
+            <h2  class="text-heading">Chicago</h2>
+             <div class="text-discription">Thank you, Chicago - A night we won't forget</div>
           </div>
 
         </div>
+           <!-- CONTENT -->
          <!-- About section -->
         <div id="content">
           <div class="content-section">
@@ -67,11 +68,52 @@
               </div>
             </div> 
               <!-- Tour section -->
-            <div class="content-section">
-               <h2 class="section-heading">TOUR DATES</h2>
-               <p class="section-sup-heading">Remember to book your tickets!</p>
-               </div>
+              <div class="tour-section"> 
+
+                <div class="content-section">
+                   <h2 class="section-heading text-white">TOUR DATES</h2>
+                   <p class="section-sup-heading text-white">Remember to book your tickets!</p>
+                     <!--tickets -->
+                      <ul class="tickets-lits">
+                        <li>September <span class="sold-out">Sold out</span></li>
+                        <li>October  <span class="sold-out">Sold out</span></li>
+                        <li>November <span class="quantity">3</span></li>
+                      </ul>
+                       <!-- places -->
+                       <div class="places-list">
+                       <div class="places-item">
+                          <img src="./assets/img/places1.jpg" alt="New York" class="places-img">
+                          <div class="places-body">
+                            <h3 class="places-heading">New York</h3>
+                            <p class="places-time">Fri 27 Nov 2016</p>
+                            <p class="places-discribe">Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
+                            <button class="btn places-buy-btn js-buy-ticket">Buy Tickets</button>
+                          </div>
+                        </div>
+                        <div class="places-item">
+                          <img src="./assets/img/places2.jpg" alt="New York" class="places-img">
+                          <div class="places-body">
+                            <h3 class="places-heading">Paris</h3>
+                            <p class="places-time">Sat 28 Nov 2016</p>
+                            <p class="places-discribe">Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
+                            <button class="btn places-buy-btn js-buy-ticket">Buy Tickets</button>
+                          </div>
+                        </div>
+                        <div class="places-item">
+                          <img src="./assets/img/places3.jpg" alt="New York" class="places-img">
+                          <div class="places-body">
+                            <h3 class="places-heading">San Francisco</h3>
+                            <p class="places-time">Sun 29 Nov 2016</p>
+                            <p class="places-discribe">Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
+                            <button class="btn places-buy-btn js-buy-ticket">Buy Tickets</button>
+                          </div>
+                        </div>
+                         
+                       </div>
+                   </div>
+              </div>
                 <!-- contact section -->
+
              <div class="content-section">
                <h2 class="section-heading">CONTACT</h2>
                <p class="section-sup-heading">Fan? Drop a note! </p>
@@ -82,8 +124,64 @@
 
         </div>
       </div>
+
+      <div class="modal js-modal ">
+        <div class="modal-container">
+
+          <div class="modal-close js-modal-close">
+            <i class="ti-close"></i>
+          </div>
+          <div class="modal-header">
+            <i class="modal-content ti-bag">
+              Tickets
+            </i>
+          </div>
+          <div class="modal-body">
+            <lebal for="modal-tickets-quantity" class="modal-lebal"> <!-- for trong label chi chỉ hoạt  động được với id ,công dụng khi lick vào nội dung label sẽ tự đưa vào phần input-->
+              <i class="ti-shopping-cart-full"></i>
+              Tickets, $15 per person
+            </lebal>
+            <input id="modal-tickets-quantity" type="text" class="modal-input" placeholder="How many?">
+
+            <lebal for="" class="modal-lebal">
+              <i class="ti-user"></i>
+              Send To
+            </lebal>
+            <input   type="text" class="modal-input" placeholder="Enter emeal?">
+            <button id="buy-tickets">
+              Play
+               <i class="ti-check"></i>
+            </button>
+          </div>
+          <div class="modal-footer">
+            <p class="modal-help">Need <a href="">Help</a></p>
+          </div>
+        </div>
+       </div>
       
-  
+     <script>
+      /*tao một hằng */
+       /* (const) là hằng trong javascrip, (buyBtns) là tên biến do người dùng đặt vào kí hiệu s để biết biến nầy chứa số nhiều , (document) đại diện cho trang web nên muốn lấy phần tử nào trong trang web phải đi qua document , (queryselectorAll) để lấy tất cả các class cùng tên trong web */
+      const buyBtns = document.querySelectorAll('js-buy-ticket')
+      const modal= document.querySelector('js-modal')
+      const modalClose =document.querySelector('js-modal-close')
+
+      /* tao ham de mmo modal*/
+      function showbuyticket(){ 
+       modal.classList.add('open')
+      }
+      /* tao ham de dong modal*/
+      function hidebuyticket(){
+        modalClose.classList.remove('open')
+      }
+
+      /* toa vong lap */
+      for (const buybtn of buyBtns){
+        buyBtn.addEventlistener('click',showbuyticket)
+      }
+      modalClose.addEventListener('click',hidebuyticket)
+      
+     </script>
   
     </body>
       
