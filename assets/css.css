@@ -205,6 +205,7 @@
 
     .tour-section{
       background-color:#000;
+      
     }
      .tickets-lits{
       background-color:#fff;
@@ -322,6 +323,7 @@
     min-height:200px;
     background-color:#fff;
     position:relative;
+    animation:modaldein ease 0.4s;
 
    }
    .modal-close{
@@ -397,3 +399,99 @@
    .modal-footer a{
     color:rgb(13, 120, 174);
    }
+    /* contact */
+    .contact-section{
+      max-width:800px;
+      margin-left:auto;   /* cang giửa cho khối */
+      margin-right:auto;  /*                     */
+      padding:64px 16px;
+    }
+    .section-heading{
+      
+    }
+    .section-sup-heading{
+      margin:15px 0;
+      
+    }
+    .contact-content{
+      display:flex;
+      padding:32px 0 ;
+    }
+    .contact-method{
+      width:400px;
+      margin-bottom:16px;
+      font-size: 18px;
+      line-height:1.5;
+      font-family: "Lato", sans-serif;
+    }
+    .a1{
+      margin-right:9px;
+      
+    }
+    .contact-input{
+      width:400px;
+
+    }
+    .contact-name-email{
+      display:flex;
+    }
+    .contact-name {
+      padding-right:8px;
+      
+    }
+    .contact-email{
+      padding-left:8px;
+      
+    }
+    .contact-Nit{
+      width:192px;
+      padding:8px;
+      font-size:18px;
+
+    }
+    .contact-message-input{
+      width:100%;
+      margin:15px 0;
+    }
+    .contact-button{
+      float:right;
+      margin-bottom:15px;
+      padding:8px 16px;
+      font-weight: 600;  /* độ dầy của từ */
+      background-color:#000;
+      color:#fff;
+      letter-spacing: 2px; /* khoản cách giửa các từ */
+
+    }
+    .contact-button:hover{
+     background-color:#ccc;
+     color:#000;
+    }
+
+  /* thực hiện hiệu ứng cuộn khối modal-container từ trên xuống kết hợp với ( animation:(tên được đặt ở @keyframes) ease 0.5s (thơi gian cuộn )) */
+  @keyframes modaldein{
+    from{
+      opacity:0 ;
+      transform:translateY(-164px);
+    }
+    to{
+      opacity:1;
+      transform:translateY(0px);
+
+    }
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
  <html>
    <head>
-      <title>www.text_Selector</title>
+      <title>www.thong-cac-bu</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="./assets/css.css">
@@ -13,12 +13,12 @@
         <div id="header">
           <!--bigin Navigation -->        
           <ul id="nav">
-            <li><a haref="">Home</a></li>
-            <li><a haref="">Band</a></li>
-            <li><a haref="">Tour</a></li>
-            <li><a haref="">Contact</a></li>
+            <li><a href="#">Home</a></li>
+            <li><a href="#band">Band</a></li>
+            <li><a href="#tour">Tour</a></li>
+            <li><a href="#contact">Contact</a></li>
             <li>
-              <a haref="">
+              <a href="">
                 More
                  <i class="nav-icon ti-angle-down"></i>
               </a>
@@ -45,7 +45,7 @@
            <!-- CONTENT -->
          <!-- About section -->
         <div id="content">
-          <div class="content-section">
+          <div id="band" class="content-section">
              <h2 class="section-heading">THE BAND</h2>
              <p class="section-sup-heading">We love music</p>
              <p class="about-text">
@@ -68,7 +68,7 @@
               </div>
             </div> 
               <!-- Tour section -->
-              <div class="tour-section"> 
+              <div id="tour" class="tour-section"> 
 
                 <div class="content-section">
                    <h2 class="section-heading text-white">TOUR DATES</h2>
@@ -105,7 +105,8 @@
                             <h3 class="places-heading">San Francisco</h3>
                             <p class="places-time">Sun 29 Nov 2016</p>
                             <p class="places-discribe">Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
-                            <button class="btn places-buy-btn js-buy-ticket">Buy Tickets</button>
+                            <button  class="btn places-buy-btn js-buy-ticket">Buy Tickets</button>
+                            <!-- dùng cách onclick để bắt sự kiện click// onclick="document.getElementById('modal1').style.display='flex'"   -->
                           </div>
                         </div>
                          
@@ -114,20 +115,44 @@
               </div>
                 <!-- contact section -->
 
-             <div class="content-section">
+             <div id="contact" class="contact-section">
                <h2 class="section-heading">CONTACT</h2>
                <p class="section-sup-heading">Fan? Drop a note! </p>
-               </div>
-         
+                <div class="contact-content">
+                  <div class="contact-method">
+                    <p> <i class="a1 ti-location-pin" ></i> Chicago, US</p>
+                    <p> <i class="a1 ti-headphone-alt" ></i>Phone: +00 151515 </p>
+                    <p> <i class="a1 ti-email" ></i> Email: mail@mail.com</p>
+                    </div>
+                    <div class="contact-input">
+                      <form action="">
+                        <div class="contact-name-email">
+                          <div class="contact-name">
+                            <input class="contact-Nit" type="text" placeholder="Name" required name="Name" >
+                          </div>
+                          <div class="contact-email">
+                            <input class="contact-Nit" type="text" placeholder="Email" required name="Email" >
+                          </div>
+                        </div>
+                        <input class="contact-Nit contact-message-input" type="text" placeholder="Message" required name="massage" >
+                        <button class="contact-button" type="submmit" >SEND</button>
+
+                      </form>
+                    </div>
+
+                  </div>
+                </div>
         </div>
+
+
         <div id="footer">
 
         </div>
       </div>
 
-      <div class="modal js-modal ">
-        <div class="modal-container">
-
+      <div id = "modal1" class="modal js-modal ">
+        <div class="modal-container js-modal-container">
+ 
           <div class="modal-close js-modal-close">
             <i class="ti-close"></i>
           </div>
@@ -137,16 +162,16 @@
             </i>
           </div>
           <div class="modal-body">
-            <lebal for="modal-tickets-quantity" class="modal-lebal"> <!-- for trong label chi chỉ hoạt  động được với id ,công dụng khi lick vào nội dung label sẽ tự đưa vào phần input-->
+            <label for="modal-tickets-quantity" class="modal-lebal"> <!-- for trong label chi chỉ hoạt  động được với id ,công dụng khi lick vào nội dung label sẽ tự đưa vào phần input-->
               <i class="ti-shopping-cart-full"></i>
               Tickets, $15 per person
-            </lebal>
-            <input id="modal-tickets-quantity" type="text" class="modal-input" placeholder="How many?">
+            </label>
+            <input id="modal-tickets-quantity" type="modal-tickets-quantity" class="modal-input" placeholder="How many?">
 
-            <lebal for="" class="modal-lebal">
+            <label for="" class="modal-lebal">
               <i class="ti-user"></i>
               Send To
-            </lebal>
+            </label>
             <input   type="text" class="modal-input" placeholder="Enter emeal?">
             <button id="buy-tickets">
               Play
@@ -160,26 +185,35 @@
        </div>
       
      <script>
-      /*tao một hằng */
-       /* (const) là hằng trong javascrip, (buyBtns) là tên biến do người dùng đặt vào kí hiệu s để biết biến nầy chứa số nhiều , (document) đại diện cho trang web nên muốn lấy phần tử nào trong trang web phải đi qua document , (queryselectorAll) để lấy tất cả các class cùng tên trong web */
-      const buyBtns = document.querySelectorAll('js-buy-ticket')
-      const modal= document.querySelector('js-modal')
-      const modalClose =document.querySelector('js-modal-close')
+      
+      /*tao một hằng 
+        (const) là hằng trong javascrip, (buyBtns) là tên biến do người dùng đặt vào kí hiệu s để biết biến nầy chứa số nhiều , (document) đại diện cho trang web nên muốn lấy phần tử nào trong trang web phải đi qua document , (queryselectorAll) để lấy tất cả các class cùng tên trong web */
+       const buyBtns = document.querySelectorAll('.js-buy-ticket')
+       const modal= document.querySelector('.js-modal')
+       const modalClose =document.querySelector('.js-modal-close')
+       const modalcontainer = document.querySelector('.js-modal-container')
 
-      /* tao ham de mmo modal*/
-      function showbuyticket(){ 
-       modal.classList.add('open')
-      }
-      /* tao ham de dong modal*/
-      function hidebuyticket(){
-        modalClose.classList.remove('open')
-      }
+      /* tao ham de mmo modal mua ve */
+        function showbuyticket(){ 
+         modal.classList.add('open')
+         }
+      /* tao ham de dong modal mua ve*/
+         function hidebuyticket(){
+           modal.classList.remove('open')
+        }
 
-      /* toa vong lap */
-      for (const buybtn of buyBtns){
-        buyBtn.addEventlistener('click',showbuyticket)
-      }
-      modalClose.addEventListener('click',hidebuyticket)
+      /* toa vong lap va nghe hanh vi click */
+       for (const buyBtn of buyBtns){
+          buyBtn.addEventListener('click',showbuyticket)
+        }  
+        // nghe hanh vi click vao nut modal-close
+        modalClose.addEventListener('click',hidebuyticket)
+       // tắt modal bằng cái click bên ngoài modal-container
+        modal.addEventListener('click',hidebuyticket)
+        // tắt trạng thái nỏi bọt đến modal-contrainer
+        modalcontainer.addEventListener('click',function (event){
+          event.stopPropagation()
+        } )
       
      </script>
   
