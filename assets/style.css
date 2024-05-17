@@ -6,6 +6,63 @@
     margin: 0;
     box-sizing: border-box;
 }
+  
+html{
+   scroll-behavior: smooth;/*hành vi khhi cuộn */
+  font-family: Arial, Helvetica, sans-serif;
+} 
+
+
+/* common (dùng chhung) */
+
+ .row::after{  /*cachs khắc phục lỗi không ôm thẻ con*/
+  content:"";
+  display:block;
+  clear:both;
+ }
+  .margin-top{
+    margin-top:8px;
+  }
+
+ .text-white{
+  color:#fff !important; /* độ ưu tiên mạnh  */
+ }
+
+  .share-hover:hover{
+  background-color: #757575;
+  color:#000;
+  cursor:grabbing;
+  
+ }
+   
+   .text-center{
+    text-align:center !important
+
+   }
+  
+  .row{
+    margin-left:-8px;
+    margin-right:-8px;
+
+  }
+   .column{
+    float:left;
+    padding:0 8px;
+
+   }
+    
+   .column-third{
+    width:calc(100%/3);
+
+
+   }
+   
+   .column-half{
+    width:50%;
+   }
+   .column-full{
+    width: 100%;
+   }
 
 
 
@@ -24,45 +81,37 @@
 
 
 
-   /*inline :để các khối tùư nằm dọc thành ngang ,block:vẩn giử lại tính chất khối*/
-    html{
-      font-family: Arial, Helvetica, sans-serif;
-    } 
-     .text-white{
-      color:#fff !important; /* độ ưu tiên mạnh  */
-     }
-
-   #main{
-
-   }
+   
+   
 
    #header{
      height:46px;
      background-color: #000;
      position:fixed;   /* lệnh position:fixed nầy giúp cho phần header dính sát phía trên khi cuônnj không bị trôi. inset để viết gọn viêtj canh 4 hướng thai vè là top , right,bottom,left,    */
-     inset:0 0 auto 0;
+     inset:0 0 auto 0;  /* viết tắt của top right bottom left */
      z-index:1;       /* Nếu phần header bị chìm bên dưới ảnh sử dụng lệnh nầy để giúp header nổi lên lại  */
-
-   }
+     overflow:hidden;
+     max-width:100%;
+  
+     }
+  
+    /* Navigation */
     #nav{
       display:inline-block;
     }
-    /* #nav > li{
-    display:inline-block;
-   } */
+   
     #nav li {
       display:inline-block;
-      position:relative;
-      
-      
+      position:relative;  
     }
+
     #nav li a{
-      
       line-height:46px;
       padding:0 24px; 
-      text-decoration: none;
-      
+      text-decoration: none;  
+      display: block;
     }
+
     #nav > li > a{
       color:aliceblue;
       text-transform: uppercase;
@@ -88,8 +137,8 @@
      background-color: #fff;
      box-shadow:0 0 10px rgba(0, 0, 0, 0.3);
      min-width:160px;
-     
     }
+
      #nav .nav-icon{
       font-size:12px;
      }
@@ -100,32 +149,47 @@
         color:#000;
         padding:0 8px
       }
+
+
+        
+        /* search */
+      #header .mobile-menu-btn ,
       #header .search-btn{
         float:right;/*khi moọt thẻ div có tính chất kế thừa chiều ngang đi nửa thì khi đưa 'float ' vào thì sẽ bị mất tính kế thừa */
-
+        padding:0 20px;
+        
       }
+      
       #header .search-btn:hover {
         background-color:coral;
         cursor:pointer; /*cursor: để thai đổi kiểu con trỏ chuột */
       }
+      #header .mobile-menu-btn:hover{
+        background-color:#ccc;
+        
+      }
+      #header .mobile-menu-btn:hover .menu-icon{
+        color:#000;
+      }
 
+
+      #header .menu-icon ,
       #header .search-icon{
         color:#fff;
         line-height:46px;  /*line-height: có công dụng để căn giửa khoản cách bên trong của thể cha, lúc nầy thẻ <div> cha height=46px */
-        padding:0 20px;
-        font-size:20px
-        
+        font-size:20px 
       }
 
+
+         /* slider */
     #slider{
       padding-top:50%;  /*tức là cho tỉ lệ chiều rộng bằng một nủa chiều ngang(chiều ngang mặt định úc nầy =100%) */
       
       margin-top:46px; /*chừa chổ cho phần header nếu không phần header sẽ bị đẩy nổi lên trên do header lúc nầy đang có thuộc tính position:fixed */
       background:url(/assets/img/chicago.jpg) top center / cover no-repeat;
       position:relative;
-      
-     
     }
+
     #slider .text-content{
        color:#ccc;
        position:absolute;
@@ -144,17 +208,15 @@
 
     }
     #slider .text-discription{
-     font-size:15px;
-     
+     font-size:15px; 
     }
 
    
 
-   #content{
-   
-   }
+       /* band  */
    #content .content-section{
     width: 800px;
+    max-width:100%;
     margin-left:auto;
     margin-right:auto;
     padding:64px 0;
@@ -179,30 +241,27 @@
     margin-top:25px;
    }
 
-
-
    #content .member-list{
-     padding-top:47px;
+     padding-top:48px;
      overflow:hidden; /* khắc phục lỗi không ôm đc thẻ con khhi sử dụng (float) */
-    
    }
    
-   #content .member-item{
-    float:left;  /* Kéo dảy hình đứng sang nầm ngang ,khi sử dụng thẻ nầy thẻ con sẽ nổi lên mặt trên làm cho thẻ cha không ôm đc những thẻ con có dùng (float) */
-    width:calc(100% /3);
-    text-align:center;
-  }
+  
    #content .member-name{
-    
     margin:15px 0;
    }
+
    #content .member-avata{
     margin-bottom:16px;
     border-radius:4px; /* taoj góc bo cho hình ảnh */
     width:154px; /* kichs cở ảnh */
    }
-    /* Tour ssection */
 
+
+
+
+
+    /* Tour ssection */
     .tour-section{
       background-color:#000;
       
@@ -235,72 +294,134 @@
       /* chir sử dụng đc (margin) số âm khi đi cùng với (float) */
      }
 
+
+
+
      /* places */
      .places-list{
-      padding:32px 8px;
-      margin:0 -16px;  /* để canh hai mép ngoài khi bị lệch ,phải viết ở thẻ cha chứa thẻ con đó */
+      padding-top:32px;
+      padding-bottom:48px;
+     /* margin:0 -16px;  /* để canh hai mép ngoài khi bị lệch ,phải viết ở thẻ cha chứa thẻ con đó */
       overflow: hidden;
-     }
-     .places-item{
-      float:left;
-      width:calc(100%/3);
-      padding:0 8px;
-      margin-bottom:16px;
-      
-      
-    }
+        }
+    
     
     .places-img{
       width:100%;
-      display:block;  /* do (img) lúc nầy có tính chất của díplay:inline nên phải thai bằng display:block đẻ thẻ cha nó có thể ôm trọn hết  */
-      
-    }
+      display:block;  /* do (img) lúc nầy có tính chất của díplay:inline nên phải thai bằng display:block đẻ thẻ cha nó có thể ôm trọn hết  */ 
+       }
+
     .places-img:hover{
       opacity:0.6; /* opacity: độ mờ đục */
-    }
+       }
     
     .places-body{
       background-color:#fff;
       padding:16px ;
       font-size:15px;
+        }
 
-     }
      .places-heading{
       margin:15px 0;
       font-weight:600;
+        }
 
-     }
      .places-time{
       color:#757575;
-
-     }
-
+        }
 
      .places-discribe{
       margin:15px 0;
       line-height: 1.5;
-
-     }
+        }
      .places-buy-btn{
       margin-bottom: 16px;
       color: #fff;
       background-color: black;
       padding: 11px 16px;
       display:inline-block;  /* lúc nầy thẻ đang mang tính chất của inline khi padding lên vì có tính chất của inline nê thẻ nayaf không chạm viền với hẻ khác mà sẽ nổi lên trên để khắc phục thì cần đổi lại thành display:inline-block */
+        }
 
-     }
-     .places-buy-btn:hover{
-      color:#000;
-      background-color:#757575;
-     }
 
+
+
+         /* contact */
+   #content .contact-section{
+        max-width:800px; 
+        margin-left:auto;   /* cang giửa cho khối */
+        margin-right:auto;  /*                     */
+        padding:64px 16px;
+     } 
+    .section-sup-heading{
+      margin:15px 0;     
+    }
+
+    .contact-content{
+      display:flex;
+      margin-top:48px;
+    }
+     
+    .contact-infor{
+      font-size:18px;
+      line-height: 1.5;
+    }
+    
+    .contact-infor p i {
+      width: 30px;
+      display: inline-block;
+    }
+ 
+    .contact-form{
+      font-size:15px;
+
+    }
+    .contact-form .form-control{
+      padding:10px;
+      border: 1px solid #ccc;
+      width: 100%;
+    }
+
+    .contact-form .submit-form{
+      margin-top:18px;
+      float:right;
+      padding:11px 19px;
+      background-color:#000;
+      color:#fff;
+    }
+
+    /* Map */
+    .map-section img {
+    width:100%;
+    display:inline-block;
+    }
      
 
-   #footer{
 
-   }
+
+     /* footer */
+     #footer{
+      padding:36px 16px;
+      text-align:center;
+     }
+
+     #footer .socials-list a {
+      text-decoration:none; /* thường để xóa dấu gạch chân,in đậm... */
+     color:#000;
+     }
+
+     #footer p{
+      margin:15px 0 ;
+      color:#000;
+     }
+     #footer .socials-list a:hover ,
+     #footer p:hover{
+      color:#757575;
+     }
+     
+
+
+    
      /*MOdal*/
-   
    .modal{
     position:fixed;
     top:0;
@@ -340,15 +461,14 @@
       border-radius:4px; /* taoj góc bo cho hình ảnh */
     }
    
-   
    .modal-header{
     background-color: rgb(7, 103, 71);
     height:130px;
     display: flex;           /*                     */
     align-items:center;      /*    canh giửa        */
-    justify-content:center; /*                      */
-    
+    justify-content:center; /*                      */  
   }
+
   .modal-content{
     font-size:30px;
     color:#fff;
@@ -399,74 +519,9 @@
    .modal-footer a{
     color:rgb(13, 120, 174);
    }
-    /* contact */
-    .contact-section{
-      max-width:800px;
-      margin-left:auto;   /* cang giửa cho khối */
-      margin-right:auto;  /*                     */
-      padding:64px 16px;
-    }
-    .section-heading{
-      
-    }
-    .section-sup-heading{
-      margin:15px 0;
-      
-    }
-    .contact-content{
-      display:flex;
-      padding:32px 0 ;
-    }
-    .contact-method{
-      width:400px;
-      margin-bottom:16px;
-      font-size: 18px;
-      line-height:1.5;
-      font-family: "Lato", sans-serif;
-    }
-    .a1{
-      margin-right:9px;
-      
-    }
-    .contact-input{
-      width:400px;
 
-    }
-    .contact-name-email{
-      display:flex;
-    }
-    .contact-name {
-      padding-right:8px;
-      
-    }
-    .contact-email{
-      padding-left:8px;
-      
-    }
-    .contact-Nit{
-      width:192px;
-      padding:8px;
-      font-size:18px;
+   
 
-    }
-    .contact-message-input{
-      width:100%;
-      margin:15px 0;
-    }
-    .contact-button{
-      float:right;
-      margin-bottom:15px;
-      padding:8px 16px;
-      font-weight: 600;  /* độ dầy của từ */
-      background-color:#000;
-      color:#fff;
-      letter-spacing: 2px; /* khoản cách giửa các từ */
-
-    }
-    .contact-button:hover{
-     background-color:#ccc;
-     color:#000;
-    }
 
   /* thực hiện hiệu ứng cuộn khối modal-container từ trên xuống kết hợp với ( animation:(tên được đặt ở @keyframes) ease 0.5s (thơi gian cuộn )) */
   @keyframes modaldein{
@@ -481,9 +536,8 @@
     }
   }
 
-
-
-
+ 
+   
 
 
 

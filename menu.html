@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu list</title>
+    <style>
+      *{
+        margin:0;
+        padding:0 ;
+        box-sizing: border-box;
+      }
+   .body{
+    position:relative;
+    border:1px solid black;
+    padding:20px ;
+    height:200px
+   }
+   .navbar{
+    position:absolute;
+    bottom:0;
+    left:0;
+    
+    
+   }
+   .img{
+    position:absolute;
+    right:0;
+    top:10px;
+    margin-right: 10px;
+   }
+   .navbar li {
+    display:inline-block;
+    right:0;
+    margin-right:15px;
+     position:relative;
+   }
+   .navbar li a {
+    text-decoration:none;
+    color:black;
+    display:block;
+    padding:10px;
+   }
+   .dropdown-tao ,
+   .dropdown-buoi{
+    display:none;
+    position:absolute;
+    top:100%;
+    left:0;
+    min-width: 140px;
+   
+     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);/* hiệu ứng đổ bóng */
+   }
+   .dropdown-buoi li,
+   .dropdown-tao li{
+     display:block;
+   
+   }
+   
+   .navbar li:hover .dropdown-tao , 
+   .navbar li:hover .dropdown-buoi{
+    display:block;
+   } 
+   .dropdown-buoi ul li a:hover,
+   .dropdown-tao ul  li a:hover{
+    background-color: aliceblue;
+   }
+    </style>
+</head>
+<body>
+   <div class="body">
+    <div class="img">
+      <img src="./assets/img/chicago.jpg" alt="hinh anh" width="200px" height="100px">
+    </div>
+    <nav>
+      <ul class="navbar">
+        <li><a href="#">Tao</a></li>
+        <li><a href="#">Xoai</a>
+           <div class="dropdown-tao">
+                 <ul>
+                  <li><a href="#">xoai tuong</a></li>
+                 <li><a href="#">Xoai cac</a></li>
+                 <li><a href="#">Xoai tu qui</a></li>
+                 </ul>
+              </div>
+           </li>
+         <li><a href="#">Man</a></li>
+         <li><a href="#">Buoi</a>
+           <div class="dropdown-buoi">
+             <ul>
+                <li><a href="#">Buoi nam roi</a></li>
+                <li><a href="#">Buoi dad xanh</a></li>   
+             </ul>         
+             </div>
+            </li>
+            
+      </ul>
+    </nav>
+
+   </div>
+</body>
+</html>

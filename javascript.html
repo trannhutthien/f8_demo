@@ -1,0 +1,703 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+     <!-- DOM event -->
+     <h1>
+      <span> DOM Event 1</span>
+     </h1>
+     <h1>
+      <span> DOM Event 2</span>
+     </h1>
+     <h1>
+      <span> DOM Event 3</span>
+     </h1>
+       
+         <input type="text">; 
+         <br><br>
+         <input style="width:30px ; height:30px;" type="checkbox"  >
+         <br><br>
+         <select>
+           <option value="1">javascript</option>
+           <option value="2">html.css</option>
+           <option value="3">php</option>
+           <option value="4">python</option>
+           
+         </select>
+         <br>
+         <br>
+         <a href="https://fullstack.edu.vn/">lap trinh f8</a>
+          <br>
+          <br>
+         <a href="https://www.w3schools.com/jsref/dom_obj_event.asp">W3scholl</a>
+         <br>
+         <br>
+         <div >
+          div  
+            
+            <button id="btn" >click me</button>
+         </div>
+
+
+    <script> 
+   
+
+    //     1
+    //     // Viết hàm tại đây
+// function getLastElement (array){
+//     var copyarray = array.slice(0);
+//     return copyarray.pop(1) ;
+// }
+
+
+
+// // Ví dụ sử dụng
+// var animals = ['Monkey', 'Tiger', 'Elephant'];
+// var result = getLastElement(animals);
+
+// console.log(result); // Expected: "Elephant"
+// console.log(animals); // Expected: ['Monkey', 'Tiger', 'Elephant']
+
+//----------------------------
+       //2
+
+// function run(a) {
+//     // 
+//     if(a % 15 === 0){
+//         return 1
+//     } else if(a % 5 ===0){
+//         return 2
+//     } else if(a % 3 === 0){
+//         return 3 ;
+//     }
+// }
+
+
+// // Kỳ vọng
+// console.log(run(3)) // 1
+// console.log(run(5)) // 2
+// console.log(run(15)) // 3
+
+//----------------------------
+     //3
+// // Làm bài
+// function getCanVoteMessage(age ){
+//    return age >= 18 ? "Bạn có thể bỏ phiếu" :"Bạn chưa được bỏ phiếu" ;
+// }
+
+// // Kỳ vọng
+// console.log(getCanVoteMessage(19)) // 'Bạn có thể bỏ phiếu'
+// //console.log(getCanVoteMessage(15)) // 'Bạn chưa được bỏ phiếu'
+
+//----------------------------
+          // 4
+// chạy ra một dạy số bất kì tưd min tới max có độ dài (length) là 5
+// function getRandNumbers(min, max, length) {
+//   const array = [];
+//   for (let i = 0; i < length; i++) {
+//     array[i] = Math.random() * (max - min) + min ;
+   
+//   }
+//   return array;
+// }
+
+// // Sử dụng hàm getRandNumbers
+// const randomNumbers = getRandNumbers(1, 100, 5);
+// console.log(randomNumbers);
+
+
+//----------------------------
+        // 5
+//   let ob ={
+//     name: 'nhut thien',
+//     age: 20 ,
+//     address: 'tv , VN'
+//   };
+   
+//   for (const key in ob){
+//    // lấy key 
+//     //console.log(key);
+//     // lấy value
+//     console.log(ob[key])
+//   }
+
+
+//----------------------------
+         //6
+// function run(object) {
+//     const result = [];
+//     for(const key in object) {
+//         result.push(`Thuộc tính ${key} có giá trị ${object[key]}`);
+//     }
+//     return result;
+// }
+
+// // Expected results:
+// console.log(run({ name: 'Nguyen Van A', age: 16 }));
+// // Output:
+// // [
+// //     "Thuộc tính name có giá trị Nguyen Van A",
+// //     "Thuộc tính age có giá trị 16"
+// ]
+
+//----------------------------
+          //7
+// câu lệnh do while ví dụ về việt nạp thẻ caof dt thất bại sẽ gửi lại 3 lần rồi mới dừng
+
+// var i = 0 ;
+//    var issucces = false ;
+//     do {
+//         i++;
+//         console.log(`nap the lan ` + i);
+
+//         if(true){
+//           issucces =true ;
+//         }
+
+//     } while( !issucces && i < 3)  ;
+
+
+//------------------------------------------------------------------------
+       //8
+
+  // var object ={
+  //   name:'nhutthien',
+  //   age:20,
+  //   [addresskey]:'tv ,vn'
+  // }
+  
+  // var addresskey = 'address';
+
+  //  console.log(object)
+  //  console.log(object.name)
+//------------------------------------------------------------------------
+          //9
+    // object cóntrusctor
+    
+  //  function User(firsname , lastname , name , address){
+  //        this.firsname = firsname ;
+  //        this.lastname = lastname; 
+  //        this.name = name ;
+  //        this.address = address ;
+  //        this.getfullname = function(){
+  //         return `${firsname} ${lastname} ${name}`;
+  //        }
+  //  }
+   
+  //  var tnt =new User('tran' ,'nhut','thien','tvcity');
+  //       tnt.title='trai dep';    
+
+  //  var nnn = new User('hua' ,'minh','dat','saigon') ;
+
+  //  console.log(tnt);
+  //  console.table(nnn.getfullname());
+
+//------------------------------------------------------------------------
+         //10
+    //  // kiểu dử liệu date
+    //  var date = new Date();
+    //  var year =date.getFullYear();
+    //  var month =date.getMonth()  + 1;
+    //  var day =date.getDate();
+       
+    //  console.log( `${day}/${month}/${year}`)
+//------------------------------------------------------------------------
+  //        11
+  //  var myarray =[
+  //   [1 , 2 ,3],
+  //   [4 , 5, 6],
+  //   [5, 6 ,7]
+  //  ];
+
+  //   for (var i =0 ; i < myarray.length ; i++){
+  //       for(var j = 0 ; j < myarray[i].length ; j++){
+  //         console.log(myarray[i] [j])
+  //       }
+  //   }
+
+//------------------------------------------------------------------------
+      //   12         
+
+// Đệ quy 
+
+        // function countdown(number) {
+        //     if (number > 0 && number % 2 === 0) { // Thay đổi điều kiện để chỉ in số chẳn
+        //         console.log(number);
+        //     return countdown(number - 1);
+        //       } else {
+        //          if( number >0){
+        //           return countdown(number - 1) 
+        //          }   
+        //          }    
+        //      }
+        //      countdown(100);
+//------------------------------------------------------------------------
+       // 13
+      // bài toán tính giai thừa
+
+    //   function giaiThua(number){
+    //     var output = 1 ;
+    //     for( i = number ; i > 0 ; i--){
+    //       output = output * i ;
+    //     }
+    //     return output ;
+    //   }
+     
+    //   console.log(giaiThua(5))
+
+//------------------------------------------------------------------------
+    // 14
+   
+  // var a = 10 ;
+  // var b ="10"
+  // var c = 5 ;
+  //  if(a >= b){
+  //   c += b ;
+  //  }
+  //  if(a === b){
+  //   c += a ;
+  //  }
+
+  // console.log(c)
+  // console.log(typeof c)
+
+//------------------------------------------------------------------------
+      // 15      
+       
+    // var courses =[
+    //   {
+    //     id:1 ,
+    //     name:'javascript',
+    //     coin:12,
+    //   },
+    //   {
+    //     id:2 ,
+    //     name:'c++',
+    //     coin:45,
+    //   },
+    //   {
+    //     id:3 ,
+    //     name:'html , css',
+    //     coin:1,
+    //   },
+    //   {
+    //     id:4,
+    //     name:'reponsit',
+    //     coin:30,
+    //   },
+    //   {
+    //     id:5 ,
+    //     name:'php',
+    //     coin:32,
+    //   },
+    //   {
+    //     id:6 ,
+    //     name:'c++',
+    //     coin:45,
+    //   },
+    // ];
+
+              // forEach
+    // courses.forEach(function(course){
+    //   console.log(course)
+    // });        
+   
+
+               //every()
+    // var freecourses =courses.every(function(course){
+    //   return course.coin > 0 ;
+    // }); 
+    // console.log(freecourses)  
+
+
+
+                //some()
+    // var freecourses =courses.some(function(course){
+    //   console.log(course)
+    //   return course.coin > 30 ;
+    // });   
+    // console.log(freecourses)   
+
+
+
+                      //find()
+    // var freecourses =courses.find(function(course){  
+    //   return course.name === 'c#' ;
+    // });
+    // console.log(freecourses)                        
+
+
+                // filter()
+  //  function getMostFavoriteSport(courses){
+  //   var listcourses =courses.filter(function(course){
+  //     return course.name ==='c++';
+  //   });
+  //   return listcourses ;
+  //  }
+  //  console.log(getMostFavoriteSport(courses))     
+
+    
+
+
+        //map()
+  //  var newCourses =courses.map(code)
+
+  //   function code(str){
+  //     return {
+  //       id: str.id,
+  //       name:`khoa hoc: ${str.name}`,
+  //       coin: str.coin,
+  //       cointext:`gia: ${str.coin}`
+  //     }
+  //   }
+
+  //   console.log(newCourses)
+
+
+           //reduce
+    // var totalcoin = courses.reduce(function(total , arr){
+    //   return total + arr.coin ;
+    // }, 0)
+        
+
+    // console.log(totalcoin)
+
+//------------------------------------------------------------------------
+       //16   reducr()
+
+//        var watchList = [
+//   {
+//     "Title": "Inception",
+//     "Year": "2010",
+//     "Rated": "PG-13",
+//     "Released": "16 Jul 2010",
+//     "Runtime": "148 min",
+//     "Genre": "Action, Adventure, Crime",
+//     "Director": "Christopher Nolan",
+//     "Writer": "Christopher Nolan",
+//     "Actors": "Leonardo DiCaprio, Joseph Gordon-Levitt, Elliot Page, Tom Hardy",
+//     "Plot": "A thief, who steals corporate secrets through use of dream-sharing technology, is given the inverse task of planting an idea into the mind of a CEO.",
+//     "Language": "English, Japanese, French",
+//     "Country": "USA, UK",
+//     "imdbRating": "8.8",
+//     "imdbVotes": "1,446,708",
+//     "imdbID": "tt1375666",
+//     "Type": "movie",
+//   },
+//   {
+//     "Title": "Interstellar",
+//     "Year": "2014",
+//     "Rated": "PG-13",
+//     "Released": "07 Nov 2014",
+//     "Runtime": "169 min",
+//     "Genre": "Adventure, Drama, Sci-Fi",
+//     "Director": "Christopher Nolan",
+//     "Writer": "Jonathan Nolan, Christopher Nolan",
+//     "Actors": "Ellen Burstyn, Matthew McConaughey, Mackenzie Foy, John Lithgow",
+//     "Plot": "A team of explorers travel through a wormhole in space in an attempt to ensure humanity's survival.",
+//     "Language": "English",
+//     "Country": "USA, UK",
+//     "imdbRating": "8.6",
+//     "imdbVotes": "910,366",
+//     "imdbID": "tt0816692",
+//     "Type": "movie",
+//   },
+//   {
+//     "Title": "The Dark Knight",
+//     "Year": "2008",
+//     "Rated": "PG-13",
+//     "Released": "18 Jul 2008",
+//     "Runtime": "152 min",
+//     "Genre": "Action, Adventure, Crime",
+//     "Director": "Christopher Nolan",
+//     "Writer": "Jonathan Nolan (screenplay), Christopher Nolan (screenplay), Christopher Nolan (story), David S. Goyer (story), Bob Kane (characters)",
+//     "Actors": "Christian Bale, Heath Ledger, Aaron Eckhart, Michael Caine",
+//     "Plot": "When the menace known as the Joker wreaks havoc and chaos on the people of Gotham, the caped crusader must come to terms with one of the greatest psychological tests of his ability to fight injustice.",
+//     "Language": "English, Mandarin",
+//     "Country": "USA, UK",
+//     "imdbRating": "9.0",
+//     "imdbVotes": "1,652,832",
+//     "imdbID": "tt0468569",
+//     "Type": "movie",
+//   },
+//   {
+//     "Title": "Batman Begins",
+//     "Year": "2005",
+//     "Rated": "PG-13",
+//     "Released": "15 Jun 2005",
+//     "Runtime": "140 min",
+//     "Genre": "Action, Adventure",
+//     "Director": "Christopher Nolan",
+//     "Writer": "Bob Kane (characters), David S. Goyer (story), Christopher Nolan (screenplay), David S. Goyer (screenplay)",
+//     "Actors": "Christian Bale, Michael Caine, Liam Neeson, Katie Holmes",
+//     "Plot": "After training with his mentor, Batman begins his fight to free crime-ridden Gotham City from the corruption that Scarecrow and the League of Shadows have cast upon it.",
+//     "Language": "English, Urdu, Mandarin",
+//     "Country": "USA, UK",
+//     "imdbRating": "8.3",
+//     "imdbVotes": "972,584",
+//     "imdbID": "tt0372784",
+//     "Type": "movie",
+//   },
+//   {
+//     "Title": "Avatar",
+//     "Year": "2009",
+//     "Rated": "PG-13",
+//     "Released": "18 Dec 2009",
+//     "Runtime": "162 min",
+//     "Genre": "Action, Adventure, Fantasy",
+//     "Director": "James Cameron",
+//     "Writer": "James Cameron",
+//     "Actors": "Sam Worthington, Zoe Saldana, Sigourney Weaver, Stephen Lang",
+//     "Plot": "A paraplegic marine dispatched to the moon Pandora on a unique mission becomes torn between following his orders and protecting the world he feels is his home.",
+//     "Language": "English, Spanish",
+//     "Country": "USA, UK",
+//     "imdbRating": "7.9",
+//     "imdbVotes": "876,575",
+//     "imdbID": "tt0499549",
+//     "Type": "movie",
+//   }
+// ];
+
+
+// function calculateRating(watchList){
+//   var movieList = watchList.filter((movie) => 
+//   movie.Director === "Christopher Nolan");
+//       console.log(movieList.length);
+
+//  var totalList = movieList.reduce((total , arr) =>
+// ( total + arr.imdbRating * 1), 0) 
+//  return totalList / movieList.length 
+
+// };
+
+
+// // Expected results
+// console.log(calculateRating(watchList)); // Output: 8.675
+
+
+
+
+// var arr = [
+//     ['name', 'Sơn Đặng'],
+//     ['age', 18 ],
+// ];
+// console.log(arrToObj(arr)); // { name: 'Sơn Đặng', age: 18 }
+
+// function arrToObj(arr) {
+//   return arr.reduce(function(obj, current) {
+//     obj[current[0]] = current[1];
+//     return obj;
+//   }, {});
+// }
+//------------------------------------------------------------------------
+    // DOM event
+    //element node
+
+//  var h1elements = 
+//       document.querySelectorAll('h1'); 
+//    for(var i=0 ; i < h1elements.length ; i++){
+//     h1elements[i].onclick =function(e){
+//       console.log(e.target);
+//     }
+//    }
+    
+
+
+     //input / select    
+    //  var inputelement = document.querySelector('select')
+    //   // console.log(inputelement)
+    //  inputelement.onchange= function(e){
+    //   console.log(e.target.value)
+    //  }   
+
+
+
+
+      // thao tác với bàn phím
+//     var input =document.querySelector('input[type="text"]')
+// input.onkeydown=function(e){
+//   console.log(e.which)
+//   switch(e.which){
+//     case 13:
+//       console.log('Exit');
+//       break
+//     }
+//   }
+
+
+
+    //    // preventDefault() ngăn chặn hành vi mặt định
+    //    var aElement = document.links ;
+    
+    // for( var i=0 ; i < aElement.length; ++i){
+    //       aElement[i].onclick = function(e){
+    //        if(!e.target.href.startsWith('https://fullstack.edu.vn/')){
+    //          e.preventDefault();
+    //        }
+    //       }
+    // }
+  
+
+
+
+           //stopPropagation() ngăn chặn hành vi nổi bọt 
+
+        // var clickdiv =document.querySelector('div')       
+        // clickdiv.onclick = function(e){
+        //   console.log("div")
+        // }
+      
+        // var clickbutton = document.querySelector('button')
+        // clickbutton.onclick = function(e){
+        //   e.stopPropagation()
+        //   console.log("button")
+        // }
+
+
+        
+
+               // gán một hàm trống trong DOM EVENT ( hàm xẽ dừng hoạt dộng trong 3s)
+      //  var clickme = document.querySelector('button')
+
+      //  clickme.onclick = function(e){
+      //   console.log("tran")
+      //   console.log("nhut")
+      //   console.log("thien")
+        
+      //  }
+
+      //  setTimeout(function(){
+      //   clickme.onclick =function() {}
+      //  },3000);
+
+//------------------------------------------------------------------------
+
+
+             // EVEN LISTENER
+    //   var clickListener = document.getElementById('btn')
+
+    //   function viec1(){
+    //     console.log('nhut thien');
+    //   }
+    //   function viec2(){
+    //     console.log('tran nhut thien');
+    //   }
+     
+
+    //  clickListener.addEventListener('click',viec1 )
+    //  clickListener.addEventListener('click',viec2 )
+
+    //  setTimeout(function(){
+    //   clickListener.removeEventListener('click' , viec1);
+    //  })
+
+//------------------------------------------------------------------------
+      // callBack
+
+      // Hàm mô phỏng việc tải tệp từ máy chủ.
+// function downloadFile(url, callback) {
+//     console.log("Bắt đầu tải tệp từ:", url);
+//     setTimeout(function() {
+//         // Giả sử việc tải tệp mất 2 giây.
+//         var content = "Nội dung của tệp đã được tải xong từ " + url;
+//         console.log("Tệp đã được tải xong từ:", url);
+//         callback(null, content); // Gọi lại hàm callback với nội dung tệp.
+//     }, 2000);
+// }
+
+// // Hàm xử lý nội dung tệp sau khi đã được tải xong.
+// function processFile(err, content) {
+//     if (err) {
+//         console.error("Đã xảy ra lỗi:", err);
+//     } else {
+//         console.log("Đã nhận được nội dung từ tệp:");
+//         console.log(content);
+//     }
+// }
+
+// // Gọi hàm downloadFile với callback processFile.
+// downloadFile("https://example.com/file.txt", processFile);
+//------------------------------------------------------------------------
+      // callBack
+//       Array.prototype.myMap = function(cb) {
+//     var newArray = []; // Tạo một mảng mới để lưu kết quả
+
+//     // Duyệt qua từng phần tử của mảng
+//     for (var i = 0; i < this.length; i++) {
+//         // Gọi hàm callback và truyền vào giá trị phần tử và chỉ số của phần tử
+//         // Lưu kết quả vào mảng mới
+//         newArray.push(cb(this[i], i, this));
+//     }
+
+//     return newArray; // Trả về mảng mới đã được thay đổi
+// }
+
+// // Test với một số ví dụ
+// const numbers = [1, 2, 3];
+
+// console.log(numbers.myMap(function (number) {
+//     return number * 2;
+// })); // Output: [2, 4, 6]
+
+// console.log(numbers.myMap(function (number, index) {
+//     return number * index;
+// })); // Output: [0, 2, 6]
+
+
+
+
+        //callback foreach
+
+   Array.prototype.forEach2 = function(callback){
+    for(var index in this){
+    if(this.hasOwnProperty(index)){
+      callback(this[index] , index ,this)
+    }
+    }
+   }
+
+  var courses = [
+    "javacript",
+    "html ,css " ,
+    "php"
+
+  ]
+    // var courses = new Array(100) 
+    // courses.push("javascript")
+
+  courses.forEach2(function(course , index ,array){
+   console.log(  course, index ,array);
+  })
+
+
+  alert("xin chao")
+
+
+
+
+//------------------------------------------------------------------------
+  // var friends = [
+  //   'thong ' ,
+  //   'nhan',
+  //   'vinh'  ]
+  //   console.log(friends )
+    
+  //   for(var i= 0 ; i<friends.length ; ++i){
+  //     if(friends[i] === "nhan"){
+  //       console.log( friends[i] + ":la sinh vien tvu")
+  //     }else{
+  //       console.log( friends[i] +":khong phai sinh vien tvu")
+  //     }
+  //   }
+
+</script>
+     
+ 
+   
+</body>
+</html>

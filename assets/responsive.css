@@ -1,0 +1,54 @@
+
+
+
+ /* RESPONSIVE DESIGN*/
+    /* có thể sử dụng thẻ ( overflow:hidden ) vào thẻ cha main ,tức là khi thẻ con nào trong main chui ra khỏi thì sẽ bị ẩn đi (trường hợp nầy sẽ không được tối ưu hóa nhất ) */
+    
+    /* pc: width => 1024 */
+    @media only screen and (min-width: 1024px){
+     #header .mobile-menu-btn{
+      display:none;
+     }
+    }
+
+    /* Tablet : width => 740px and width < 1024px*/
+    @media only screen and (min-width: 740px) and (max-width: 1024px){
+        #content .content-section{
+          padding-left: 16px;
+          padding-right: 16px;
+  
+        }
+        #header .mobile-menu-btn{
+          display:none;
+         }
+      }
+  
+      /* mobile: width < 740px */
+      @media only screen and (max-width: 739px){
+      
+       #nav , #nav li:hover a{
+        display:block;
+       }
+       
+       #header .mobile-menu-btn{
+        position:absolute;
+        top:0;
+        right:0;
+       }
+
+        #nav li {
+            display:block;
+        }
+
+        #nav > li:first-child{
+          display:inline-block;
+        }
+
+        #header .search-btn{
+          display:none;
+        }
+        body{
+          margin:0 20px;
+        }
+        
+      }

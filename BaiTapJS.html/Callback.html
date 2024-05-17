@@ -1,0 +1,196 @@
+<script>
+// alert("xin chao")
+       // callBack
+//       Array.prototype.myMap = function(cb) {
+//     var newArray = [];        // Tạo một mảng mới để lưu kết quả
+
+//     // Duyệt qua từng phần tử của mảng
+//     for (var i = 0; i < this.length; i++) {
+//         // Gọi hàm callback và truyền vào giá trị phần tử và chỉ số của phần tử
+//         // Lưu kết quả vào mảng mới
+//         newArray.push(cb(this[i], i, this));
+//     }
+
+//     return newArray; // Trả về mảng mới đã được thay đổi
+// }
+
+// // Test với một số ví dụ
+// const numbers = [1, 2, 3];
+
+// console.log(numbers.myMap(function (number) {
+//     return number * 2;
+// })); // Output: [2, 4, 6]
+
+// console.log(numbers.myMap(function (number, index) {
+//     return number * index;
+// })); // Output: [0, 2, 6]
+//------------------------------------------------------------------------
+     // callBack
+
+      // Hàm mô phỏng việc tải tệp từ máy chủ.
+// function downloadFile(url, callback) {
+//     console.log("Bắt đầu tải tệp từ:", url);
+//     setTimeout(function() {
+//         // Giả sử việc tải tệp mất 2 giây.
+//         var content = "Nội dung của tệp đã được tải xong từ " + url;
+//         console.log("Tệp đã được tải xong từ:", url);
+//         callback(null, content); // Gọi lại hàm callback với nội dung tệp.
+//     }, 2000);
+// }
+
+// // Hàm xử lý nội dung tệp sau khi đã được tải xong.
+// function processFile(err, content) {
+//     if (err) {
+//         console.error("Đã xảy ra lỗi:", err);
+//     } else {
+//         console.log("Đã nhận được nội dung từ tệp:");
+//         console.log(content);
+//     }
+// }
+
+// // Gọi hàm downloadFile với callback processFile.
+// downloadFile("https://example.com/file.txt", processFile);
+//------------------------------------------------------------------------
+   
+         //callback foreach
+        // this.hasOwnProperty() : để chọn những phần ở gần ,bỏ phần ở trong proto
+
+//    Array.prototype.forEach2 = function(callback){
+//     for(var index in this){
+//     if(this.hasOwnProperty(index)){
+//       callback(this[index] , index ,this)
+//     }
+//     }
+//    }
+
+//   var courses = [
+//     "javacript",
+//     "html ,css " ,
+//     "php"
+
+//   ]
+//     // var courses = new Array(100) 
+//     // courses.push("javascript")
+
+//   courses.forEach2(function(course , index ,array){
+//    console.log(  course, index ,array);
+//   })
+
+//------------------------------------------------------------------------
+     //callback filter
+
+// Array.prototype.filter2 = function(callback){
+//   var output =[]
+//     for(var index in this){
+//         if(this.hasOwnProperty(index)){
+//           var result =  callback(this[index] , index , this)
+//                 if(result){
+//                  output.push(this[index])
+//                 }
+            
+//         }
+//     }
+//     return output;
+// }
+
+// var courses =[
+//         {
+//             name:'javascript',
+//             coin:550 ,
+//         },
+//         {
+//             name:'htlm ,css',
+//             coin:880 ,
+//         },
+//         {
+//             name:'php',
+//             coin:50 ,
+//         },
+//         {
+//             name:'phython',
+//             coin:400 ,
+//         },
+//       ]
+
+//       var listCourses = courses.filter2(function(course ,index ,array){
+//         // console.log(course ,index ,array)
+//          return course.coin > 500 
+//      })
+//         console.log(listCourses)
+      
+
+
+//------------------------------------------------------------------------
+
+//callback some
+
+// Array.prototype.mySome = function(cb) {
+//     var output = false
+//     for(var index in this){
+//         if(this.hasOwnProperty(index)){
+//             if(cb(this[index] , index ,this)){
+//                   output = true ;
+//             }
+//         }
+//     }
+//     return output ;
+// }
+
+
+
+//  // Expected results:
+
+// const numbers = [1, 3, 3, 5];
+
+// console.log(numbers.mySome(function (number) {
+//     return number % 2 === 0;
+// })); Output: false
+
+// console.log(numbers.mySome(function (number, index) {
+//     return index % 2 === 0;
+// })); Output: true
+
+// console.log(numbers.mySome(function (number, index, array) {
+//     return array.length % 2 === 0;
+// })); Output: true
+ 
+//------------------------------------------------------------------------
+     
+      //CALLBACK EVERY
+   
+
+      
+      Array.prototype.myEvery = function(cb) {
+       var output =  true ;
+       for(var index in this){
+        if(this.hasOwnProperty(index)){
+            var result =cb (this[index] ,index , this)
+            if( !result){
+                output = false ;
+            }
+        }
+       }
+       return output ;
+}
+
+
+// Expected results
+
+const numbers = [1, 3, 3, 5];
+
+console.log(numbers.myEvery(function (number) {
+    return number % 2 !== 0;
+})); // Output: true
+
+console.log(numbers.myEvery(function (number, index) {
+    return index % 2 === 0;
+})); // Output: false
+
+console.log(numbers.myEvery(function (number, index, array) {
+    return array.length % 2 === 0;
+})); // Output: true
+
+
+
+
+</script>

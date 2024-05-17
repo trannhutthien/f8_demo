@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/fonts/themify-icons-font (1)/themify-icons/themify-icons.css">
+    <link rel="stylesheet" href="./assets/pizza.css">
+    <title>Document</title>
+</head>
+<body>
+   <div class="form-body">
+     <form action="" class="was-validated">
+      <h1 onclick="console.log(Math.random())">Phiếu Đăng Ký</h1>
+      <label for="form-name">Ho va Ten</label><br>
+      <input type="text" id="form-name" name="name" list="item" required size="30px" placeholder="Name">
+        <datalist id="item">
+          <option>c</option>
+          <option>c++</option>
+          <option>javascript</option>
+          <option>php</option>
+          <option>sQl</option>
+          <option>c</option>
+          <option>c</option>
+          
+        </datalist>
+      <br><br>
+      <label for="form-dc">Dia chi</label><br>
+      <input type="text" id="form-dc" name="diachi" required size="35px" placeholder="dia chi">
+      <br><br>
+      <label for="form-email">Email</label><br>
+      <input type="email" id="form-email" name="email"  required size="30px" placeholder="email">
+      <br><br>
+      <label form="gender">Giới Tính</label>
+      <label><input type="radio" required name="gender"> Nam</label>
+      <label><input type="radio" required name="gender"> nữ</label>
+      <br><br>
+      <label for="birthday">Tuoi:</label>
+      <input type="date" required name="birthday" value="" >
+      <br><br>
+      <label for="birthday">So Thich:</label><br>
+      <label><input type="checkbox" name="1"> Thể Thao</label><br>
+      <label><input type="checkbox" name="2"> Văn HỌc</label><br>
+      <label><input type="checkbox" name="3"> Công Nghệ Thông Tin</label><br>
+      <label><input type="checkbox" name="4"> Lịch sử </label><br>
+      <label><input type="checkbox" name="5"> Game</label><br>
+      <br><br>
+      <label for="">Chuyên Ngành: </label>
+      <select name="">
+        <option required value="1">Công Nghệ Web</option>
+        <option required value="1">Trí Tuệ Nhân Tạo</option>
+        <option required value="1" selected >Mobile</option>
+        
+      </select>
+      <br><br>
+      <label for="avata">Gửi Hình:</label>
+      <input type="file" required name="avata" value="" >
+      <br><br>
+      <label for="avata">Yêu cầu:</label><br>
+      <textarea rows="5" cols="35"></textarea>
+      <br><br>
+       <button>Gửi Thông Tin</button> 
+       <button type="reset">Làm lại</button> 
+      
+       
+       
+
+
+     </form>
+
+   </div>
+                 
+
+         
+</body>
+</html>

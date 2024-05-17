@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+       <img src="asset/img/Screenshot 2024-04-27 211954.png" alt=" HTML DOM">
+
+       <div>
+        <h1>
+            <span> heading text</span>
+            <span> heading text</span>
+            </h1>
+    </div>
+
+    <ul>
+        
+    </ul>
+</body>
+<script>
+//    // HTML DOM
+
+// 1. element   : là những thẻ trong html
+// 2. attribile  : là những thuộc tính của thẻ dó 
+// 3.text : là nội dung trong thẻ đó
+
+
+// ------------------------------------------------------------------
+//  javascrip : browver  | server (NodeJS)
+ 
+//  // brrowver : html -> DOM -> Web API
+
+
+// ------------------------------------------------------------------
+//   Get Element method
+// 1. element  : Id , class , tag (tên thẻ) , Css selector , HTML conlection
+//  var  heading =  document.getElementById('id của thẻ muốn lấy')
+//    => trả về một (Element)
+    
+
+//  var  heading =  document.getElementsByClassName('class của thẻ muốn lấy')  
+//     => trả về (HTML collection)
+
+
+//  var  heading =  document.getElementsByTagName('tên của thẻ muốn lấy')    
+//      => trả về (HTML collection)
+
+
+//  var  heading =  document.querySelector('')
+//    -- khi bên trong là tên thẻ sẽ lấy thẻ đâù tiên 
+//    -- nếu bên trong bắt đầu bằng dấu(.) thì lấy class đầu tiên ,(#) thì lấy id đầu tiên
+//    => trả về một (Element)
+    
+//  var  heading =  document.querySelectorAll('')
+//    --lấy tất cả (.) , (#) hoặc là tên thẻ
+//     => trả về một ( Node List) 
+
+
+// ==> có thẻ dùng vòng lập để chuyển từ ( NodeList , HTML Collection) thành dạng Element       
+   
+// ------------------------------------------------------------------
+      // DOM attribute
+ //   ---> thêm (attribute) theo cách hơpj lệ 
+//      var heading = document.querySelector("h1")
+//        heading.color ='red' ;
+
+
+ //   ---> thêm (attribute) theo cách không hợp lệ 
+//      var heading = document.querySelector("h1")
+//        heading.setAttribute('href' , 'http.www3c');
+
+
+
+//   ----> cách lấy ra (Attribute)
+//    console.log(heading.getAttribute('tên attribute muốn lấy'))
+
+// ------------------------------------------------------------------
+//       3.text : là nội dung trong thẻ đó
+//       InnerText and textContent
+  
+//  var newheading = document.querySelector('h1')
+//     console.log(newheading.innerText)
+//     //lấy ra phần nội dung(text) i như những gì trên trình duyệt thấy
+     
+//     var newheading = document.querySelector('h1')
+//     console.log(newheading.textContent)
+     //lấy ra tất cả phần text kể cả những khỏng trống khonagr cách xuốn hàng thực sự bên trong nó
+     
+     function render(html) {
+  var innerhtml = document.querySelector("ul") ;
+  innerhtml.innerHTML = html ; 
+}
+
+render(`
+    <li>Khóa học HTML</li>
+    <li>Khóa học JS</li>
+    <li>Khóa học PHP</li>
+`)
+
+console.log(innerhtml)
+
+</script>
+</html>
